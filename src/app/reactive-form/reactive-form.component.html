@@ -1,0 +1,19 @@
+<p>Reactive Form</p>
+
+<form [formGroup]="regUserForm" (ngSubmit)="UserRegistration(regUserForm)"> 
+
+    <div>
+        <input type="text" placeHolder="First Name" formControlName="firstName" required>
+    </div>
+    <div>
+        <input type="text" placeHolder="Last Name" formControlName="lastName" required>
+    </div>
+    <div>
+        <input type="text" placeHolder="Email Id" formControlName="emailID" required>
+    </div>
+    <div>
+        <button class="btn" type="submit" [disabled]="!regUserForm.valid">Register</button>
+        <button class="btn" type="reset">Reset</button> 
+    </div>
+ 
+</form>
